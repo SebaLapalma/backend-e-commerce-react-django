@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+wp7_wlhrgp!(dm@_e3&a2(q^(6@)-64=^bc#xn^5_6#0rxytl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['24.144.90.143']
+ALLOWED_HOSTS = ['localhost', '24.144.90.143']
 
 
 # Application definition
@@ -186,7 +186,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR)
 MEDIA_ROOT = 'static/images'
 
 # Default primary key field type

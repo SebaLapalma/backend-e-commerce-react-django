@@ -28,7 +28,6 @@ DEBUG = False
 ALLOWED_HOSTS = ['24.144.90.143']
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -132,20 +131,19 @@ if DEBUG:
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 else:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'backenddb',
-        'USER': 'sebastian',
-        'PASSWORD': '38543890',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '',
     }
-}
-
+}   
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -187,8 +185,6 @@ MEDIA_URL = '/images/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
-
-STATIC_ROOT = 'static'
 
 MEDIA_ROOT = 'static/images'
 

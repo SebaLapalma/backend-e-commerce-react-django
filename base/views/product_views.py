@@ -13,6 +13,7 @@ from base.serializers import ProductSerializer
 def getProducts(request):
     products = Product.objects.all()
     serializer = ProductSerializer(products, many=True)
+    print(request.META['HTTP_HOST'])
     return Response(serializer.data)
 
 

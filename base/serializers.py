@@ -37,16 +37,16 @@ class UserSerializerWithToken(UserSerializer):
     
 class ProductSerializer(serializers.ModelSerializer):
     image = serializers.SerializerMethodField()
+    absolute_image_url = serializers.SerializerMethodField()
+
 
     class Meta:
         model = Product
         fields = '__all__'
 
-    def get_image(self, obj):
+    def get_absolute_image_url(self, obj):
         request = self.context.get('request')
-        image_url = request.build_absolute_uri(obj.image.url)
-        print("Image URL:", image_url)
-        return image_url
+        return request.build_absolute_uri(obj.absolute_image_url)
         
 class ShippingAddressSerializer(serializers.ModelSerializer):
     class Meta:

@@ -18,7 +18,6 @@ class Product(models.Model):
     createdAt = models.DateTimeField(auto_now_add=True)
     _id = models.AutoField(primary_key=True, editable=False)
     
-    @property
     def absolute_image_url(self):
         if self.image:
             return self.image.url

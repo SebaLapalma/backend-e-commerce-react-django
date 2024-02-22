@@ -42,7 +42,7 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = '__all__'
 
-    def get_absolute_image_url(self, obj):
+    def absolute_image_url(self, obj):
         request = self.context.get('request')
         return request.build_absolute_uri(obj.absolute_image_url())
         

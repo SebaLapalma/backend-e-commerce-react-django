@@ -44,7 +44,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def get_absolute_image_url(self, obj):
         request = self.context.get('request')
-        return request.build_absolute_uri(obj.get_absolute_image_url())
+        return request.build_absolute_uri(obj.absolute_image_url())
         
 class ShippingAddressSerializer(serializers.ModelSerializer):
     class Meta:

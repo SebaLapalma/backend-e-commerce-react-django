@@ -8,7 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
     # ... otros ajustes según tus necesidades ...
 
     def absolute_image_url(self, obj):
-        return obj.get_absolute_image_url()
+        return obj.absolute_image_url()
 
     absolute_image_url.short_description = 'Absolute Image URL'
 
